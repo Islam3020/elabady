@@ -1,17 +1,25 @@
 import 'package:elabady/core/theme/theme_app.dart';
 import 'package:elabady/features/previous_invoices/presentation/screen/prevoius_invoices_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ElabadyApp extends StatelessWidget {
   const ElabadyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeApp.primaryTheme,
-      locale: const Locale("ar"),
-      debugShowCheckedModeBanner: false,
-      home: const PrevoiusInvoicesScreen(),
+    return ScreenUtilInit(
+      designSize: const Size(1280, 1076),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_, child) {
+        return MaterialApp(
+          theme: ThemeApp.primaryTheme,
+          locale: const Locale("ar"),
+          debugShowCheckedModeBanner: false,
+          home: const PrevoiusInvoicesScreen(),
+        );
+      },
     );
   }
 }

@@ -23,3 +23,30 @@ class CustomElevatedButtonBack extends StatelessWidget {
         ));
   }
 }
+
+class CustomElevatedButton extends StatelessWidget {
+  const CustomElevatedButton({
+    super.key,
+    required this.textStyle,
+    required this.title,
+    required this.onTap,
+    required this.backGroundColor,
+  });
+  final TextStyle textStyle;
+  final String title;
+  final VoidCallback onTap;
+  final Color backGroundColor;
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onTap,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: backGroundColor,
+      ),
+      child: Text(
+        title,
+        style: textStyle,
+      ),
+    );
+  }
+}
