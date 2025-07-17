@@ -3,6 +3,7 @@ import 'package:elabady/core/shared/custom_elevated_button.dart';
 import 'package:elabady/core/theme/textstyle_app.dart';
 import 'package:elabady/features/previous_invoices/presentation/widget/custom_button_fillter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 class HeaderWidget extends StatelessWidget {
@@ -22,7 +23,7 @@ class HeaderWidget extends StatelessWidget {
             ),
           ],
         ),
-        const Gap(30.0),
+        Gap(30.0.h),
         TextFormField(
           textDirection: TextDirection.rtl,
           textAlign: TextAlign.right,
@@ -30,7 +31,7 @@ class HeaderWidget extends StatelessWidget {
             hintText: TextApp.hintSearchOfInvoices,
           ),
         ),
-        const Gap(22.0),
+        Gap(22.0.h),
         const CustomButtonFillter()
       ],
     );
