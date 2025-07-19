@@ -17,4 +17,11 @@ class TextApp {
   static const String printInvoice = "طباعة الفاتورة";
   static const String exportPdf = "تصدير بصيغة PDF";
   static const String close = "غلق";
+  static const String salesReports = "تقارير المبيعات";
+  static const String from = "من";
+  static const String to = "الي";
+  static const String summery = "ملخص";
+  static const String totalInvoices = "إجمالي الفواتير";
+  static const String totalSales = "إجمالي المبيعات";
+  static const String totaldiscount = "إجمالي الخصومات المقدمة";
 }
